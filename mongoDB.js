@@ -4,8 +4,8 @@ class mongo {
     this.createMongoConnection();
   }
   createMongoConnection() {
-    // mongoose.connect(`mongodb://@localhost:27017/BankingSystem`);
-    mongoose.connect(`mongodb+srv://BankingSystem:iDATGpblgC1hW4rS@cluster0.akslf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`);
+    mongoose.connect(`mongodb://@localhost:27017/BankingSystem`);
+    // mongoose.connect(`mongodb+srv://BankingSystem:zDAdGpflgC1gW4rF@cluster0.akslf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`);
     mongoose.connection.once(`open`, () => {
       console.log(`MongoDB is connected`);
     });
