@@ -1,13 +1,67 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank App</title>
-</head>
-<body>
-    {{{body}}}
-    
-</body>
+  </head>
+
+  <body>
+    <h1>Welcome TO Best Bank</h1>
+    {{!-- <form id="form">
+      <input type="text" id="first" placeholder="First Name" />
+      <br />
+      <input type="text" id="middle" placeholder="Middle Name" />
+      <br />
+      <input type="text" id="last" placeholder="Last Name" />
+      <br />
+      <input type="number" id="age" placeholder="age" />
+      <br />
+      <input type="email" id="email" placeholder=" Email" />
+      <br />
+      <input type="text" id="address" placeholder="Address" />
+      <br />
+      <input type="text" id="gender" placeholder="Male/Female" />
+      <br />
+      <input type="text" id="type" placeholder="Customer /Employee " />
+      <br />
+      <input type="submit" value="Submit" />
+    </form> --}}
+
+  </body>
+  {{!-- <script>
+
+    let formDetails = document.getElementById("form")
+    formDetails.addEventListener("submit", (event) => { event.preventDefault();
+    const url = "http://localhost:9001/user" 
+    let first_name =document.getElementById("first").value;
+    let middle_name = document.getElementById("middle").value; 
+    let last_name = document.getElementById("last").value; 
+    let age = document.getElementById("age").value; 
+    let email =document.getElementById("email").value; 
+    let gender = document.getElementById("gender").value;
+    let type = document.getElementById("type").value;
+    const form_Submit = { "First Name": first_name, "Middle Name": middle_name, "Laste Name": last_name, "Age": age,
+    "Email": email, "Gender": gender, "Type": type }
+    console.log(form_Submit)
+    fetch(url, { 
+      method: 'POST', 
+      headers: { 'Accept': 'application/json, text/plain, */*', 'Content-Type': 'application/json'},
+      body:JSON.stringify(form_Submit) }) 
+      .then(res => res.json()) 
+      .then(res =>console.log(res)) 
+      .catch(err => console.log(err)) })
+    document.getElementById("first").value = ""
+    document.getElementById("middle").value = ""
+    document.getElementById("last").value = ""
+    document.getElementById("age").value = ""
+    document.getElementById("email").value = ""
+    document.getElementById("gender").value = ""
+    document.getElementById("type").value = ""
+
+  </script> --}}
+
 </html>
+
+{{!-- {{{ body }}} --}}

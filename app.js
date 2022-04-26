@@ -4,6 +4,7 @@ const userModel = require("./Models/User");
 const bodyParser = require("body-parser");
 const { engine } = require("express-handlebars");
 
+
 app.use(bodyParser.json([]));
 
 app.engine("handlebars", engine());
@@ -21,6 +22,7 @@ app.get("/", async (req, res, next) => {
 app.post("/user", async (req, res, next) => {
   try {
     let userDetail = req.body;
+    console.log(userDetail);
     let response = await userModel.insertMany([userDetail]);
     res.json(response);
   } catch (error) {
@@ -37,24 +39,24 @@ app.get("/user", async (req, res) => {
   }
 });
 
-app.get("/user/:userId", async (req, res) => {
-  let userId = req.params.userId;
-  let response = await userModel.find({ _id: userId });
-  res.json(response);
-});
+// app.get("/user/:userId", async (req, res) => {
+//   let userId = req.params.userId;
+//   let response = await userModel.find({ _id: userId });
+//   res.json(response);
+// });
 
-app.put("/user/:userId", async (req, res) => {
-  let userId = req.params.userId;
-  let body = req.body;
-  console.log(body, userId);
-  let response = await userModel.updateOne({ _id: userId }, { $set: body });
-  res.json(response);
-});
+// app.put("/user/:userId", async (req, res) => {
+//   let userId = req.params.userId;
+//   let body = req.body;
+//   console.log(body, userId);
+//   let response = await userModel.updateOne({ _id: userId }, { $set: body });
+//   res.json(response);
+// });
 
-app.delete("/user/:userId", async (req, res) => {
-  let userId = req.params.userId;
-  let response = await userModel.deleteOne({ _id: userId });
-  res.json(response);
-});
+// app.delete("/user/:userId", async (req, res) => {
+//   let userId = req.params.userId;
+//   let response = await userModel.deleteOne({ _id: userId });
+//   res.json(response);
+// });
 
 module.exports = app;
